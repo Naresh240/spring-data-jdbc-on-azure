@@ -25,10 +25,8 @@ node{
         }
     }
     stage('Check pods'){
-		withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'aws_configure', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-            withCredentials([kubeconfigFile(credentialsId: 'kube_config', variable: 'KUBECONFIG')]) {
+		
 				sh 'kubectl get pods'
-			}
-		}
+		
     }
 }
