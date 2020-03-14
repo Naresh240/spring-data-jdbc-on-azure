@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: naresh240/springboot-helm-chart
+  repository: naresh240/spring-data-jdbc-on-azure
   tag: latest
   pullPolicy: IfNotPresent
 
